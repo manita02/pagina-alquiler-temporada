@@ -31,6 +31,8 @@
         .carousel-inner img {
             width: 100%;
             height: 499px;
+            object-fit: cover;
+            object-position: center;
         }
 
         @media (max-width: 575px) {
@@ -47,7 +49,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand">TEMPORADA 2023 - 2024</a>
+                    <a class="navbar-brand" id="temporada"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -157,6 +159,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -35,6 +35,8 @@
         .carousel-inner img {
             width: 100%;
             height: 499px;
+            object-fit: cover;
+            object-position: center;
         }
 
         @media (max-width: 575px) {
@@ -61,7 +63,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand">TEMPORADA 2023 - 2024</a>
+                    <a class="navbar-brand" id="temporada"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -136,72 +138,11 @@
     <div class="container">
         <h1 class="mt-4">TARIFAS</h1>
         <div class="table-responsive">
-
-
             <table class="table table-dark table-hover mt-3">
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <th>Mes</th>
-                        <th>1° Quincena</th>
-                        <th>2° Quincena</th>
-                        <th>Semana</th>
-                        <th>Por día</th>
-                    </tr>
-
-                    <tr>
-                        <td>DICIEMBRE</td>
-                        <td></td>
-                        <td></td>
-                        <td><strong>Disponible hasta el 20/12/2023</strong></td>
-                        <td></td>
-                        <td>35 US$</td>
-                    </tr>
-
-                    <tr>
-                        <td>ENERO</td>
-                        <td>-</td>
-                        <td class="alquilado">ALQUILADO</td>
-                        <td class="alquilado">ALQUILADO</td>
-                        <td>-</td>
-                        <td>-</td><!– 50 US$ –>
-                    </tr>
-
-                    <tr>
-                        <td>FEBRERO</td>
-                        <td></td>
-                        <td class="alquilado">ALQUILADO</td>
-                        <td></td>
-                        <td></td>
-                        <td>50 US$</td>
-                    </tr>
-
-                    <tr>
-                        <td>MARZO</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>35 US$</td>
-                    </tr>
-
-                    <tr>
-                        <td>SEMANA SANTA</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>150 US$</td>
-                        <td></td>
-                    </tr>
-
-
-                </tbody>
+                <tbody id="tarifas-body"></tbody>
             </table>
-
-
         </div>
     </div>
-
 
     <div class="container-fluid bg-primary div">
         <div class="row mt-5">
@@ -214,17 +155,10 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
