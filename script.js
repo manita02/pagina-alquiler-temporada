@@ -7,8 +7,8 @@ function actualizarTemporada() {
 
 const tarifas = [
     { mes: "DICIEMBRE", primeraQuincena: "-", segundaQuincena: "-", semana: "-", porDia: "-" },
-    { mes: "ENERO", primeraQuincena: "1200 US$", segundaQuincena: "1200 US$", semana: "-", porDia: "80 US$" },
-    { mes: "FEBRERO", primeraQuincena: "1050 US$", segundaQuincena: "1050 US$", semana: "-", porDia: "70 US$" },
+    { mes: "ENERO", primeraQuincena: "-", segundaQuincena: "-", semana: "-", porDia: "-" },
+    { mes: "FEBRERO", primeraQuincena: "-", segundaQuincena: "-", semana: "-", porDia: "-" },
     { mes: "MARZO", primeraQuincena: "-", segundaQuincena: "-", semana: "-", porDia: "-" },
     { mes: "SEMANA SANTA", primeraQuincena: "-", segundaQuincena: "-", semana: "-", porDia: "-" }
 ];
