@@ -1,0 +1,1135 @@
+:root {
+    --color-primary: #FF6B35;        
+    --color-secondary: #F7931E;      
+    --color-accent: #FFD23F;         
+    --color-dark: #2C3E50;           
+    --color-light: #ECF0F1;          
+    --color-success: #27AE60;        
+    --color-whatsapp: #25D366;       
+    
+    --text-dark: #2C3E50;
+    --text-muted: #7F8C8D;
+    
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    --transition-base: all 0.3s ease;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    padding: 1rem 0;
+    transition: var(--transition-base);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    transition: var(--transition-base);
+    padding: 0;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-base);
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px;
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover {
+    color: var(--color-primary) !important;
+    background-color: rgba(255, 107, 53, 0.1);
+}
+
+/* Navbar scrolled */
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem 0;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+/* Carousel de fondo */
+#heroCarousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
+    height: 100%;
+}
+
+#heroCarousel .carousel-item {
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+.hero-section .lead {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.25rem;
+}
+
+.animate-fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ============================================
+   BOTÓN WHATSAPP
+   ============================================ */
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-whatsapp:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   BOTÓN TOUR VIRTUAL
+   ============================================ */
+.btn-tour {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-tour:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-tour:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-tour i {
+    font-size: 1.3rem;
+    transition: var(--transition-base);
+}
+
+.btn-tour:hover i {
+    transform: scale(1.2);
+}
+
+.btn-tour {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-tour .tour-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: var(--transition-base);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.btn-tour:hover .tour-icon {
+    transform: scale(1.2);
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   TOUR VIRTUAL - IFRAME
+   ============================================ */
+.tour-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    background: #000;
+    padding: 0;
+    min-height: 534px; 
+}
+
+.tour-video-iframe {
+    border: none;
+    border-radius: 15px;
+    width: 300px; 
+    height: 534px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.tour-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tour-video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.tour-video-placeholder:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    transform: scale(1.02);
+}
+
+.tour-video-thumbnail {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.tour-video-thumbnail i,
+.tour-video-placeholder i {
+    font-size: 5rem;
+    opacity: 0.95;
+    transition: var(--transition-base);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.tour-video-placeholder:hover .tour-video-thumbnail i,
+.tour-video-placeholder:hover i {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.tour-video-placeholder h4 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tour-video-placeholder p {
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-size: 1rem;
+    max-width: 90%;
+}
+
+/* ============================================
+   SERVICIOS - BADGES
+   ============================================ */
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+    transition: var(--transition-base);
+    cursor: default;
+    box-shadow: var(--shadow-sm);
+}
+
+.service-badge:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-color: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-badge:hover .service-badge-icon,
+.service-badge:hover .service-badge-text {
+    color: white;
+}
+
+.service-badge:hover .service-badge-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.service-badge-icon {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    transition: transform 0.6s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.service-badge-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+/* Responsive para servicios */
+@media (max-width: 768px) {
+    .service-badge {
+        padding: 0.5rem 1rem;
+    }
+    
+    .service-badge-icon {
+        font-size: 1rem;
+    }
+    
+    .service-badge-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   GALERÍA
+   ============================================ */
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: white;
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-item {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: block;
+}
+
+.gallery-item.hidden {
+    display: none !important;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition-base);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    color: white;
+    font-size: 3rem;
+}
+
+/* ============================================
+   UBICACIÓN
+   ============================================ */
+.map-container {
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   TARIFAS - GRILLA
+   ============================================ */
+.tarifas-grid {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.tarifas-grid thead th {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.tarifas-grid tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.tarifas-grid .mes-cell {
+    background-color: rgba(255, 107, 53, 0.05);
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+.tarifas-grid .tarifa-cell {
+    transition: var(--transition-base);
+    font-weight: 500;
+}
+
+.tarifas-grid tbody tr:hover .tarifa-cell:not(.alquilado) {
+    background-color: rgba(255, 107, 53, 0.05);
+}
+
+/* Estilo para celdas alquiladas */
+.tarifas-grid .tarifa-cell.alquilado {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.tarifas-grid .tarifa-cell.alquilado .badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Responsive para grilla de tarifas */
+@media (max-width: 768px) {
+    .tarifas-grid thead th,
+    .tarifas-grid tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .tarifas-grid .mes-cell {
+        padding-left: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contact-info a {
+    color: var(--text-dark);
+    transition: var(--transition-base);
+}
+
+.contact-info a:hover {
+    color: var(--color-primary);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, var(--color-dark) 0%, #34495e 100%) !important;
+}
+
+.footer-logo {
+    display: inline-block;
+    transition: var(--transition-base);
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 0;
+}
+
+.footer-link {
+    color: var(--color-primary) !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-base);
+    padding: 0.25rem 0;
+}
+
+.footer-link:hover {
+    color: var(--color-secondary) !important;
+    transform: translateY(-2px);
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   BOTONES FLOTANTES
+   ============================================ */
+
+/* Botón flotante de Tour Virtual */
+.tour-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-base);
+    text-decoration: none;
+    line-height: 0;
+    padding: 0;
+}
+
+.tour-float:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
+.tour-float:active {
+    transform: scale(0.95);
+}
+
+.tour-float-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-whatsapp);
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-base);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive para botones flotantes */
+@media (max-width: 768px) {
+    .tour-float {
+        width: 55px;
+        height: 55px;
+        bottom: 80px;
+        right: 15px;
+    }
+    
+    .tour-float-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-float i {
+        font-size: 28px;
+    }
+}
+
+/* ============================================
+   FICHA DEL INMUEBLE
+   ============================================ */
+.ficha-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    transition: var(--transition-base);
+}
+
+.ficha-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.ficha-card-body {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ficha-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.ficha-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.ficha-text {
+    flex: 1;
+}
+
+.ficha-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0.3px;
+}
+
+.ficha-code {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+.btn-ficha {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition-base);
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-ficha:hover {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    color: white;
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-ficha i {
+    transition: var(--transition-base);
+}
+
+.btn-ficha:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive para Ficha del Inmueble */
+@media (max-width: 768px) {
+    .ficha-card-body {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .ficha-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .ficha-code {
+        font-size: 1.5rem;
+    }
+    
+    .btn-ficha {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   LIGHTBOX MODAL
+   ============================================ */
+#lightboxModal .modal-content {
+    background: transparent;
+}
+
+#lightboxModal .modal-body {
+    text-align: center;
+}
+
+#lightboxModal img {
+    max-height: 80vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+#lightboxModal .btn-close {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 0.5rem;
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-card img {
+        height: 250px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 42px;
+    }
+    
+    .nav-link {
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+        padding-top: 100px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .gallery-card img {
+        height: 200px;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .gallery-filters {
+        gap: 0.5rem;
+    }
+    
+    /* Ajuste del video tour para móviles */
+    .tour-video-container {
+        max-width: 100%;
+        min-height: auto;
+    }
+    
+    .tour-video-iframe {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 480 / 854;
+        max-width: 100%;
+    }
+}
+
+/* Mobile pequeño */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-whatsapp {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .gallery-card img {
+        height: 180px;
+    }
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* Smooth scroll para navegadores que no lo soportan nativamente */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Accesibilidad - Focus visible */
+*:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Loading placeholder para imágenes */
+img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+img[src] {
+    background: none;
+    animation: none;
+}
+

@@ -1,210 +1,748 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alquiler Temporada Miramar</title>
-    <link rel="shortcut icon" href="./img/home.png">
-   
-
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <style>
-        .carousel-inner img {
-            width: 100%;
-            height: 499px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        @media (max-width: 575px) {
-            .carousel-inner img {
-                width: 100%;
-                height: 220px;
-            }
-        }
-
-        #icono {
-            width: 40px;
-            height: 40px;
-        }
-
-
-        h1 {
-            text-align: center;
-        }
-
-        body {
-            min-height: 100vh;
-        }
-
-        footer {
-            align-self: flex-end;
-            text-align: center;
-            width: 100%;
-            color: white;
-            font-style: italic;
-            box-shadow: 5px -5px 10px #9D003E;
-        }
-    </style>
+    <meta name="description" content="Alquiler Temporario Miramar - Casa de alquiler por temporada en Miramar. Disfrutá tu descanso con todas las comodidades.">
+    <title>Alquiler Temporario Miramar - Tu lugar de descanso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div class="containder-fluid bg-primary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNavbar">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" id="temporada"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="fotos.html">Fotos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ubicacion.html">Ubicación</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="tarifas.html">Tarifas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto</a>
-                            </li>
-                        </ul>
+            <a class="navbar-brand" href="#inicio">
+                <img src="assets/logo.png" alt="Alquiler Temporario Miramar" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#descripcion">Descripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#fotos">Fotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#tarifas">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <!-- Carousel de imágenes de fondo -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/amanecer.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/beach.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/city.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/espuma.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/gavio.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/gente.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/girasol.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/miramar.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/miramar2.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/miramar3.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/muelle.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/ola.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/pato.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/sea.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/vuela.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/img/hero/wave.jpg');"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+                        Casa para Alquilar en Miramar
+                    </h1>
+                    <p class="lead mb-5 animate-fade-in-delay">
+                        Disponible para la temporada <span id="temporadaAnio"></span>
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=BaMWjwo0Mgc" 
+                       target="_blank" 
+                       class="btn btn-tour btn-lg px-5 py-3 animate-fade-in-delay-2">
+                        <img src="assets/ico/tour-virtual.png" alt="Tour Virtual" class="tour-icon me-2">
+                        Ver Tour Virtual
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Descripción Section -->
+    <section id="descripcion" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="tour-video-container">
+                        <!-- Vimeo Player - Tour Virtual -->
+                        <iframe 
+                            src="https://player.vimeo.com/video/1150481642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            width="480" 
+                            height="854" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            title="recorrido_virtual_proyect"
+                            class="tour-video-iframe"
+                            id="tourVideoIframe">
+                        </iframe>
                     </div>
                 </div>
-            </nav>
-
-        </div>
-
-    </div>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./img/miramar.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/city.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/girasol.jpg" class="d-block w-100" alt="...">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Sobre la casa</h2>
+                    <p class="lead text-muted mb-4">
+                        Casa equipada para 6-7 personas, ubicada en un barrio residencial con gente de todo el año. 
+                    </p>
+                    <p class="mb-3">
+                        La casa cuenta con espacios distribuidos en 3 dormitorios, 2 baños (uno de ellos en suite), 
+                        cocina completamente equipada, living-comedor, garaje con lavadero y parrilla.
+                    </p>
+                    <p class="mb-3">
+                        <strong>Características principales:</strong> Heladera con freezer, microondas, 3 TV LED, cable, Wi-Fi, 
+                        alarma, calefacción, 3 ventiladores, ropa de cama, toallas y toallones. Incluye lavarropas automático 
+                        en el lavadero, patio delantero y trasero.
+                    </p>
+                    <p class="mb-0">
+                        <i class="bi bi-heart-fill text-primary me-2"></i>
+                        <strong>Pet Friendly:</strong> Se aceptan mascotas.
+                    </p>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    </section>
 
-
-
-
-    <div class="container mt-4">
-        <div class="row">
-            <h1>CASA PARA ALQUILAR EN TEMPORADA-MIRAMAR</h1>
-            <div class="col-12 col-md-4 mt-4">
-
-                <div class="card">
-                    <a href="fotos.html"><img src="./img/frente.jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">FOTOS</h5>
-                        <a href="fotos.html" class="btn btn-primary">Ver más</a>
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Servicios Incluidos</h2>
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-people service-badge-icon"></i>
+                        <span class="service-badge-text">7 Personas</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-wifi service-badge-icon"></i>
+                        <span class="service-badge-text">Wi-Fi</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-fire service-badge-icon"></i>
+                        <span class="service-badge-text">Parrilla</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-car-front service-badge-icon"></i>
+                        <span class="service-badge-text">Garaje</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-cup-hot service-badge-icon"></i>
+                        <span class="service-badge-text">Cocina Equipada</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-tv service-badge-icon"></i>
+                        <span class="service-badge-text">3 TV LED + Cable</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-thermometer-sun service-badge-icon"></i>
+                        <span class="service-badge-text">Calefacción</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-shield-check service-badge-icon"></i>
+                        <span class="service-badge-text">Alarma</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-tree service-badge-icon"></i>
+                        <span class="service-badge-text">Parque</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-heart service-badge-icon"></i>
+                        <span class="service-badge-text">Pet Friendly</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-door-open service-badge-icon"></i>
+                        <span class="service-badge-text">3 Dormitorios</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-droplet service-badge-icon"></i>
+                        <span class="service-badge-text">2 Baños</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="service-badge">
+                        <i class="bi bi-house service-badge-icon"></i>
+                        <span class="service-badge-text">Ropa de Cama y Toallas</span>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mt-4">
-                <div class="card">
-                    <a href="ubicacion.html"><img src="./img/ubicacion.jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">UBICACIÓN</h5>
-                        <a href="ubicacion.html" class="btn btn-primary">Ver más</a>
+        </div>
+    </section>
+
+    <!-- Fotos Section -->
+    <section id="fotos" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Galería de Fotos</h2>
+                </div>
+            </div>
+            
+            <!-- Filtros de categoría -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="interior">Interior</button>
+                        <button class="filter-btn" data-filter="exterior">Exterior</button>
+                        <button class="filter-btn" data-filter="habitaciones">Habitaciones</button>
                     </div>
                 </div>
-
             </div>
-            <div class="col-12 col-md-4 mt-4">
-                <div class="card">
-                    <a href="contacto.html"><img src="./img/contactoo.jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">CONTACTO</h5>
-                        <a href="contacto.html" class="btn btn-primary">Ver más</a>
+
+            <!-- Galería -->
+            <div class="row g-4" id="gallery-grid">
+                <!-- Exterior - Frente -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/frente_1.jpg" alt="Frente de la casa" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
                     </div>
                 </div>
+                <!-- Interior - Living -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/living_2.jpg" alt="Living" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/living_1.jpg" alt="Living" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior - Cocina -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/cocina.jpg" alt="Cocina" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior - Comedor -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/comedor.jpg" alt="Comedor" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/mesa_comedor.jpeg" alt="Mesa del comedor" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Habitaciones - Matrimonial -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/matrimonial_1.jpg" alt="Habitación matrimonial" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/matrimonial_2.jpg" alt="Habitación matrimonial" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/matrimonial_3.jpg" alt="Habitación matrimonial" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Habitaciones - Otras -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/pieza_planta_baja.jpg" alt="Habitación planta baja" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/pieza_planta_baja_2.jpg" alt="Habitación planta baja" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="habitaciones">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/pieza_planta_alta.jpg" alt="Habitación planta alta" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior - Baños -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/baño_planta_baja.jpg" alt="Baño planta baja" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/baño_planta_alta.jpg" alt="Baño planta alta" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exterior - Patio Delantero -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_1.jpeg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_2.jpeg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_3.jpeg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_4.jpeg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_5.jpeg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_delantero_6.jpg" alt="Patio delantero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exterior - Patio Trasero -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_trasero_2.jpg" alt="Patio trasero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_trasero_3.jpg" alt="Patio trasero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_trasero_4.jpg" alt="Patio trasero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_trasero_5.jpg" alt="Patio trasero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/patio_trasero_7.jpg" alt="Patio trasero" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exterior - Parrilla -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/parrilla_1.jpg" alt="Parrilla" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/parrilla_2.jpg" alt="Parrilla" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/parrilla_3.jpg" alt="Parrilla" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior - Garaje -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="assets/img/casa/garage.jpg" alt="Garaje" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Ubicación Section -->
+    <section id="ubicacion" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Ubicación</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="mb-4">Cómo llegar</h3>
+                    <p class="mb-3">
+                        La casa se encuentra ubicada en el Barrio "Las Palmas", un barrio residencial con gente de todo el año. 
+                        A dos cuadras del Parque Bicentenario, cuenta con comercios cercanos, carnicerías, verdulerías, farmacias y panaderías.
+                    </p>
+                    <p class="mb-3">
+                        <strong>DIRECCIÓN:</strong><br>
+                        CALLE 13 N° 2374 / CALLE 13 esquina 48
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-tree text-primary me-2"></i>
+                            <strong>A 2 cuadras</strong> del Parque Bicentenario
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-shop text-primary me-2"></i>
+                            <strong>Comercios cercanos:</strong> Carnicería Tito, Verdulería Estación Verde, Farmacia Beni y Panadería La Tradicional
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-house-heart text-primary me-2"></i>
+                            <strong>Barrio residencial</strong> "Las Palmas"
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.840205718891!2d-57.8476770250493!3d-38.26001195967203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958510925093ce75%3A0xd7b6ded9b8584641!2sC.%2013%202374%2C%20B7607%20Miramar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1767217295423!5m2!1ses!2sar" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifas Section -->
+    <section id="tarifas" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Tarifas y Disponibilidad</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered tarifas-grid" id="tarifasGrid">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Mes</th>
+                                    <th>1° Quincena</th>
+                                    <th>2° Quincena</th>
+                                    <th>Semana</th>
+                                    <th>Por Día</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tarifasGridBody">
+                                <!-- Las filas se cargarán dinámicamente desde JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Contacto</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead mb-4">
+                        ¿Tenés dudas o querés realizar una consulta? Contactanos por WhatsApp y te responderemos a la brevedad.
+                    </p>
+                    <a href="https://wa.me/5492234471357?text=Hola,%20me%20interesa%20consultar%20sobre%20el%20alquiler%20temporario%20en%20Miramar" 
+                       target="_blank" 
+                       class="btn btn-whatsapp btn-lg px-5 py-3 mb-4">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Contactar por WhatsApp
+                    </a>
+                    <div class="contact-info mt-5">
+                        <p class="mb-2">
+                            <i class="bi bi-envelope me-2 text-primary"></i>
+                            <a href="mailto:manitacoqui@gmail.com" class="text-decoration-none">manitacoqui@gmail.com</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-telephone me-2 text-primary"></i>
+                            <a href="tel:+5492234471357" class="text-decoration-none">+54 9 223 447-1357</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ficha del Inmueble Section -->
+    <section id="ficha-inmueble" class="py-4" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="ficha-card">
+                        <div class="ficha-card-body">
+                            <div class="ficha-content">
+                                <div class="ficha-icon">
+                                    <i class="bi bi-house-door-fill"></i>
+                                </div>
+                                <div class="ficha-text">
+                                    <h5 class="ficha-title">Ficha en Miramar Inmobiliario</h5>
+                                    <p class="ficha-code mb-0" id="fichaCode">ALQ-171</p>
+                                </div>
+                            </div>
+                            <a href="https://miramarinmobiliario.com.ar/ver-ficha-inmueble/ALQ-0171" 
+                               target="_blank" 
+                               class="btn btn-ficha"
+                               id="fichaLink">
+                                <i class="bi bi-arrow-right-circle me-2"></i>
+                                Ver Ficha Completa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón flotante de Tour Virtual -->
+    <a href="https://www.youtube.com/watch?v=BaMWjwo0Mgc" 
+       target="_blank"
+       class="tour-float"
+       aria-label="Ver Tour Virtual">
+        <img src="assets/ico/tour-virtual.png" alt="Tour Virtual" class="tour-float-icon">
+    </a>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5492234471357?text=Hola,%20me%20interesa%20consultar%20sobre%20el%20alquiler%20temporario%20en%20Miramar" 
+       target="_blank" 
+       class="whatsapp-float"
+       aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="footer-links">
+                        <a href="#inicio" class="footer-link smooth-scroll">Inicio</a>
+                        <a href="#servicios" class="footer-link smooth-scroll">Servicios</a>
+                        <a href="#fotos" class="footer-link smooth-scroll">Fotos</a>
+                        <a href="#tarifas" class="footer-link smooth-scroll">Tarifas</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-2 bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-white mb-0 small">
+                        Todos los derechos reservados | &copy; <a href="https://www.linkedin.com/in/ana-lucia-juarez" target="_blank" class="text-white text-decoration-none" style="opacity: 0.8;">Ana Lucia Juarez</a> 2025<br>
+                        Miramar, Buenos Aires, Argentina
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="" alt="" id="lightboxImage" class="img-fluid rounded">
+                </div>
             </div>
         </div>
     </div>
 
-
-    <div class="row justify-content-center mt-3">
-        <div class="col-12 col-md-8 mt-3">
-            <h1>DESCRIPCIÓN</h1>
-            <ul class="list-group mt-3">
-                <li class="list-group-item">Casa equipada para 6-7 personas, con:</li>
-                <li class="list-group-item">Cocina</li>
-                <li class="list-group-item">Living-comedor</li>
-                <li class="list-group-item">3 dormitorios</li>
-                <li class="list-group-item">2 baños, uno de ellos en suite</li>
-                <li class="list-group-item">Garaje con lavadero (lavarropa automático)</li>
-                <li class="list-group-item">Parrilla</li>
-                <li class="list-group-item">Heladera con Freezer</li>
-                <li class="list-group-item">Microondas</li>
-                <li class="list-group-item">Alarma</li>
-                <li class="list-group-item">Wi-Fi</li>
-                <li class="list-group-item">Cable</li>
-                <li class="list-group-item">3 TV LED</li>
-                <li class="list-group-item">Ropa de cama, toallas y toallones</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container-fluid bg-primary">
-        <div class="row mt-5">
-            <footer>
-                <p class="mt-3">Todos los derechos reservados | © Ana Lucia Juarez 2022</p>
-                <p>Miramar, Buenos Aires, Argentina</p>
-            </footer>
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>
+
