@@ -195,35 +195,35 @@
                 primerQuincena: { precio: '-', alquilado: false },
                 segundaQuincena: { precio: '-', alquilado: false },
                 semana: { precio: '-', alquilado: false },
-                porDia: { precio: '-', alquilado: false }
+                porDia: { precio: 'ARS$150.000', alquilado: false }
             },
             {
                 mes: 'Enero',
-                primerQuincena: { precio: '$XX.XXX', alquilado: true },
-                segundaQuincena: { precio: '$XX.XXX', alquilado: true },
-                semana: { precio: '$XX.XXX', alquilado: true },
-                porDia: { precio: '$XX.XXX', alquilado: true }
-            },
-            {
-                mes: 'Febrero',
-                primerQuincena: { precio: '$XX.XXX', alquilado: true },
-                segundaQuincena: { precio: 'ARS$1.200.000', alquilado: false },
+                primerQuincena: { precio: 'USD$1.500', alquilado: false },
+                segundaQuincena: { precio: '-', alquilado: false },
                 semana: { precio: '-', alquilado: false },
                 porDia: { precio: '-', alquilado: false }
             },
             {
-                mes: 'Marzo',
-                primerQuincena: { precio: '-', alquilado: false },
-                segundaQuincena: { precio: '-', alquilado: false },
+                mes: 'Febrero',
+                primerQuincena: { precio: 'USD$1.500', alquilado: false },
+                segundaQuincena: { precio: 'USD$1.500', alquilado: false },
                 semana: { precio: '-', alquilado: false },
-                porDia: { precio: 'USD$60', alquilado: false }
+                porDia: { precio: '-', alquilado: false }
             },
+            //{
+                //mes: 'Marzo',
+                //primerQuincena: { precio: '-', alquilado: false },
+                //segundaQuincena: { precio: '-', alquilado: false },
+                //semana: { precio: '-', alquilado: false },
+                //porDia: { precio: '-', alquilado: false }
+            //},
             {
                 mes: 'Semana Santa',
                 primerQuincena: { precio: '-', alquilado: false },
                 segundaQuincena: { precio: '-', alquilado: false },
-                semana: { precio: 'USD$500', alquilado: false },
-                porDia: { precio: '-', alquilado: false }
+                semana: { precio: '-', alquilado: false },
+                porDia: { precio: 'ARS$230.000', alquilado: false }
             }
         ];
 
@@ -283,8 +283,8 @@
     // Configuración de la ficha (puede activarse/desactivarse dinámicamente)
     const fichaConfig = {
         enabled: true, // Cambiar a false para ocultar la sección
-        codigo: 'ALQ-171',
-        url: 'https://miramarinmobiliario.com.ar/ver-ficha-inmueble/ALQ-0171'
+        codigo: 'ALQ-0044',
+        url: 'https://miramarinmobiliario.com.ar/ver-ficha-inmueble/ALQ-0044'
     };
     
     // Función para activar/desactivar la sección de ficha
