@@ -199,8 +199,8 @@
             },
             {
                 mes: 'Enero',
-                primerQuincena: { precio: 'USD$1.500', alquilado: false },
-                segundaQuincena: { precio: 'USD$1.500', alquilado: false },
+                primerQuincena: { precio: 'USD$1.500', alquilado: true },
+                segundaQuincena: { precio: 'USD$1.500', alquilado: true },
                 semana: { precio: '-', alquilado: false },
                 porDia: { precio: '-', alquilado: false }
             },
